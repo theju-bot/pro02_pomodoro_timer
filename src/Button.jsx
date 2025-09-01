@@ -8,7 +8,7 @@ const Button = ({ time, setMinutes, setSeconds, setWork,setPomodoro  }) => {
         setMinutes(String(time));
         setSeconds('00');
         setWork(time);
-        setPomodoro(false);
+        setPomodoro(true);
       }}
     >
       +{time} min
