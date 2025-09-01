@@ -10,11 +10,24 @@ const Fourm = ({
   setPomodoro,
   work,
   setWork,
+  times25,
+  times15,
+  times5,
+  resetTimer
 }) => {
   const times = [25, 15, 5];
   return (
     <form onSubmit={(e) => e.preventDefault()} className="fourm">
-      <p className={`title ${minutes === 0 && seconds === 0 ? 'dormat' : 'active'}`}>
+      <div className="logs">
+        <p>Regular Work: {String(times25)}</p>
+        <p>Short Break: {String(times15)}</p>
+        <p>Long Break: {String(times5)}</p>
+      </div>
+      <p
+        className={`title ${
+          minutes === 0 && seconds === 0 ? 'dormat' : 'active'
+        }`}
+      >
         {work === 25
           ? 'Regular Work'
           : work === 5
@@ -31,13 +44,17 @@ const Fourm = ({
           setMinutes={setMinutes}
           setSeconds={setSeconds}
           setWork={setWork}
+          setPomodoro={setPomodoro}
         />
       ))}
       <button
         className="startStopButton"
         onClick={() => setPomodoro(!pomodoro)}
       >
-        {pomodoro ? 'stop' : 'start'}
+        {pomodoro ? 'Stop' : 'Start'}
+      </button>
+      <button className="resetButton" onClick={resetTimer}>
+        Reset
       </button>
     </form>
   );

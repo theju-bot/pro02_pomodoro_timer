@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({ time, setMinutes, setSeconds, setWork }) => {
+const Button = ({ time, setMinutes, setSeconds, setWork,setPomodoro  }) => {
   return (
     <button
       className="timerButton"
@@ -8,6 +8,7 @@ const Button = ({ time, setMinutes, setSeconds, setWork }) => {
         setMinutes(String(time));
         setSeconds('00');
         setWork(time);
+        setPomodoro(false);
       }}
     >
       +{time} min
