@@ -89,6 +89,7 @@ function App() {
         times15={times15}
         times5={times5}
         resetTimer={resetTimer}
+        isDormant={!pomodoro}
       />
     </>
   );

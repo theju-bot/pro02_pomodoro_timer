@@ -1,6 +1,7 @@
 import React from 'react';
+import './index.css';
 
-const Button = ({ time, setMinutes, setSeconds, setWork,setPomodoro  }) => {
+const Button = ({ time, setMinutes, setSeconds, setWork, setPomodoro }) => {
   return (
     <button
       className="timerButton"
