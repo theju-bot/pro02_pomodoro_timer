@@ -52,6 +52,14 @@ body {
   color: var(--text-color);
   font-size: 2rem;
 }
+.dormat {
+  color: var(--timer-color);
+  font-size: 2rem;
+}
+.active {
+  color: var(--timer-color2);
+  font-size: 2rem;
+}
 .dormat:last-of-type {
   color: var(--timer-color2);
   font-size: 2rem;
@@ -80,6 +88,7 @@ body {
 .timerButton:active {
   background-color: var(--acti-color);
   color: var(--acti-color2);
+  transform: scale(0.9);
 }
 
 .startStopButton,
@@ -104,6 +113,7 @@ body {
 .resetButton:active {
   background-color: var(--acti-color);
   color: var(--acti-color2);
+  transform: scale(0.9);
 }
 
 .extras {
@@ -137,6 +147,12 @@ button {
   }
   .begining {
     color: var(--text-color);
+  }
+  .dormat {
+    color: var(--timer-color);
+  }
+  .active {
+    color: var(--timer-color2);
   }
   .dormat:last-of-type {
     color: var(--timer-color2);
